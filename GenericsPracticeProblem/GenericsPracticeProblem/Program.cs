@@ -38,6 +38,20 @@ namespace GenericsPracticeProblem
             float maxNumberThree = max.MaximumFloat(1.8f, 20.3f, 20.9f);
             Console.WriteLine("Maximum float number is:" + maxNumberThree);
 
+            //UC3
+            Console.WriteLine("Find maximum  string among 3 string Values ");
+            Maximum maxim =new Maximum();
+            //It will return maximum string value among 3 Strings.
+            string maxStringOne = maxim.MaximunStringNumber("Peach", "Apple", "Banana");
+            Console.WriteLine("Maximum string is" + maxStringOne);
+
+            string maxStringTwo = maxim.MaximunStringNumber("Apple", "Peach", "Banana");
+            Console.WriteLine("Maximum string is" + maxStringTwo);
+
+
+            string maxStringThree = maxim.MaximunStringNumber("Banana", "Apple", "Peach");
+            Console.WriteLine("Maximum string is" + maxStringThree);
+
             Console.ReadLine();
         }
     }

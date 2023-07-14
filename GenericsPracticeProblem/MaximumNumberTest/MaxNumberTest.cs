@@ -9,7 +9,7 @@ namespace MaximumNumberTest
 {
     public class MaxNumberTest
     {
-
+        //UC1:- Test cases for maximum integer value
         [Test]
         public void TestMethodOne()
         {
@@ -54,6 +54,8 @@ namespace MaximumNumberTest
             //Assert
             Assert.AreEqual(thirdValue,value);
         }
+
+        //Test case for the Maximum Float values
         [Test]
         public void TestFloatFirstValue()
         {
@@ -94,6 +96,50 @@ namespace MaximumNumberTest
 
             //Act
             float value = maximum.MaximumFloat(firstValue, secondValue, thirdValue);
+            //Assert
+            Assert.AreEqual(thirdValue, value);
+        }
+
+        //Test cases for maximum string values.
+        [Test]
+        public void TestStringFirstValue()
+        {
+            Maximum maximum = new Maximum();
+            //Arrange
+            string firstValue = "Peach";
+           string secondValue = "Apple";
+           string thirdValue = "Banana";
+
+            //Act
+            string value = maximum.MaximunStringNumber(firstValue, secondValue, thirdValue);
+            //Assert
+            Assert.AreEqual(firstValue, value);
+        }
+        [Test]
+        public void TestStringSecondValue()
+        {
+            Maximum maximum = new Maximum();
+            //Arrange
+            string firstValue = "Apple";
+            string secondValue = "Peach";
+            string thirdValue = "Banana";
+
+            //Act
+            string value = maximum.MaximunStringNumber(firstValue, secondValue, thirdValue);
+            //Assert
+            Assert.AreEqual(secondValue, value);
+        }
+        [Test]
+        public void TestStringThirdValue()
+        {
+            Maximum maximum = new Maximum();
+            //Arrange
+            string firstValue = "Banana";
+            string secondValue = "Apple";
+            string thirdValue = "Peach";
+
+            //Act
+            string value = maximum.MaximunStringNumber(firstValue, secondValue, thirdValue);
             //Assert
             Assert.AreEqual(thirdValue, value);
         }
