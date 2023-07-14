@@ -40,6 +40,20 @@ namespace MaximumNumberTest
             //Assert
             Assert.AreEqual(secondValue, value);
         }
+        [Test]
+        public void TestMethod3()
+        {
+            Maximum maximum = new Maximum();
+            //Arrange
+            int firstValue = 20;
+            int secondValue = 98;
+            int thirdValue = 100;
+
+            //Act
+            int value = maximum.Number(firstValue, secondValue, thirdValue);
+            //Assert
+            Assert.AreEqual(thirdValue,value);
+        }
     }
 }
 
