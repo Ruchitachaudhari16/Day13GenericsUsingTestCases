@@ -22,6 +22,22 @@ namespace GenericsPracticeProblem
             Console.WriteLine("{0} is largest number ", val);
             Console.ReadLine();
 
+            //UC2
+            Maximum max = new Maximum();
+            Console.WriteLine("Find maximum  number among 3 float Values ");
+            //Maximum number between three float values 
+            //It will return First maximum float value
+            float maxNumberOne = max.MaximumFloat(20.9f, 1.8f, 20.3f);
+            Console.WriteLine("Maximum float number is" + maxNumberOne);
+
+            //It will return Second maximum float value
+            float maxNumberTwo = max.MaximumFloat(1.8f, 20.9f, 20.3f);
+            Console.WriteLine("Maximum float number is:" + maxNumberTwo);
+
+            //It will return Third maximum float value
+            float maxNumberThree = max.MaximumFloat(1.8f, 20.3f, 20.9f);
+            Console.WriteLine("Maximum float number is:" + maxNumberThree);
+
             Console.ReadLine();
         }
     }

@@ -27,6 +27,25 @@ namespace GenericsPracticeProblem
             }
             throw new Exception("firstNumber,secondNumber and thirdNumber are same");
         }
-
+        //UC2 check maximum number among three numbers 
+        //Checking for the float values 
+        //Checking for maximum float value 
+        public  float MaximumFloat(float first, float second, float third)
+        {
+            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
+            {
+                return first;
+            }
+            if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
+            {
+                return second;
+            }
+            if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
+            {
+                return third;
+            }
+            throw new Exception("first , second and third are same");
+        }
     }
 }
+    

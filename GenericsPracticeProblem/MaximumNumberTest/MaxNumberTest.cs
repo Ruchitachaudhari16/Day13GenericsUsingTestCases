@@ -11,7 +11,7 @@ namespace MaximumNumberTest
     {
 
         [Test]
-        public void TestMethod1()
+        public void TestMethodOne()
         {
 
            Maximum maximum = new Maximum();
@@ -27,7 +27,7 @@ namespace MaximumNumberTest
         }
 
         [Test] 
-        public void TestMethod2()
+        public void TestMethodTWo()
         {
             Maximum maximum = new Maximum();
             //Arrange
@@ -41,7 +41,7 @@ namespace MaximumNumberTest
             Assert.AreEqual(secondValue, value);
         }
         [Test]
-        public void TestMethod3()
+        public void TestMethodThree()
         {
             Maximum maximum = new Maximum();
             //Arrange
@@ -53,6 +53,49 @@ namespace MaximumNumberTest
             int value = maximum.Number(firstValue, secondValue, thirdValue);
             //Assert
             Assert.AreEqual(thirdValue,value);
+        }
+        [Test]
+        public void TestFloatFirstValue()
+        {
+            Maximum maximum = new Maximum();
+            //Arrange
+            float firstValue = 20.9f;
+            float secondValue = 9.2f;
+            float thirdValue =10.9f;
+
+            //Act
+           float value =maximum.MaximumFloat(firstValue,secondValue,thirdValue);
+            //Assert
+            Assert.AreEqual(firstValue, value);
+        }
+
+        [Test]
+        public void TestFloatSecondValue()
+        {
+            Maximum maximum = new Maximum();
+            //Arrange
+            float firstValue = 20.9f;
+            float secondValue = 90.2f;
+            float thirdValue = 10.9f;
+
+            //Act
+            float value = maximum.MaximumFloat(firstValue, secondValue, thirdValue);
+            //Assert
+            Assert.AreEqual(secondValue,value);
+        }
+        [Test]
+        public void TestFloatThirdValue()
+        {
+            Maximum maximum = new Maximum();
+            //Arrange
+            float firstValue = 20.9f;
+            float secondValue = 90.2f;
+            float thirdValue = 100.9f;
+
+            //Act
+            float value = maximum.MaximumFloat(firstValue, secondValue, thirdValue);
+            //Assert
+            Assert.AreEqual(thirdValue, value);
         }
     }
 }
