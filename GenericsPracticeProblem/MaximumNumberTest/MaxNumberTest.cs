@@ -16,14 +16,29 @@ namespace MaximumNumberTest
 
            Maximum maximum = new Maximum();
             //Arrange
-            int firstvalue = 100;
-            int secondvalue = 20;
-            int thirdvalue = 98;
+            int firstValue = 100;
+            int secondValue = 20;
+            int thirdValue = 98;
 
             //Act
-            int value = maximum.Number(firstvalue, secondvalue, thirdvalue);
+            int value = maximum.Number(firstValue,secondValue,thirdValue);
             //Assert
-            Assert.AreEqual(firstvalue, value);
+            Assert.AreEqual(firstValue,value);
+        }
+
+        [Test] 
+        public void TestMethod2()
+        {
+            Maximum maximum = new Maximum();
+            //Arrange
+            int firstValue = 20;
+            int secondValue = 100;
+            int thirdValue = 98;
+
+            //Act
+            int value = maximum.Number(firstValue,secondValue,thirdValue);
+            //Assert
+            Assert.AreEqual(secondValue, value);
         }
     }
 }
