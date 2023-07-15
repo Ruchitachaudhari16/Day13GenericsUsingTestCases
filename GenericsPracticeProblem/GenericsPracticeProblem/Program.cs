@@ -11,7 +11,7 @@ namespace GenericsPracticeProblem
         static void Main(string[] args)
         {
             Maximum maximum = new Maximum();
-            
+
             Console.WriteLine("Enter the FirstNumber");
             int firstValue = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the SecondNumber");
@@ -42,7 +42,7 @@ namespace GenericsPracticeProblem
 
             //UC3
             Console.WriteLine("Find maximum  string among 3 string Values ");
-            Maximum maxim =new Maximum();
+            Maximum maxim = new Maximum();
             //It will return maximum string value among 3 Strings.
             string maxStringOne = maxim.MaximunStringNumber("Peach", "Apple", "Banana");
             Console.WriteLine("Maximum string is" + maxStringOne);
@@ -55,6 +55,7 @@ namespace GenericsPracticeProblem
             Console.WriteLine("Maximum string is" + maxStringThree);
             Console.WriteLine("-----------------------------------------------");
 
+            //Refactor-1
             Maximum maximu = new Maximum();
             Console.WriteLine("Please Enter the FirstValue:");
             var one = Console.ReadLine();
@@ -62,32 +63,32 @@ namespace GenericsPracticeProblem
             var two = Console.ReadLine();
             Console.WriteLine("Please Enter the ThirdValue:");
             var three = Console.ReadLine();
-            var Value = maximum.Number(one,two,three);
+            var Value = maximum.Number(one, two, three);
             Console.WriteLine("{0} is greater", Value);
+            Console.WriteLine("-----------------------------------------------------");
+            //Refactor-2  code 
+
+            int numberOne = 100, numberTwo = 200, numberThree = 800;
+            float fOne = 30.9f, fTwo = 8.5f, fThree = 10.7f;
+            string wordOne = "Ruchita", wordTwo = "Nitya", wordThree = "Siya";
+            GenericsMaximum<int> Genericsmaximum = new GenericsMaximum<int>(numberOne, numberTwo, numberThree);
+            int values = Genericsmaximum.MaxMethod();
+            Console.WriteLine("{0} is the largest", values);
+
+            GenericsMaximum<float> maximum_one = new GenericsMaximum<float>(fOne, fTwo, fThree);
+            float result = maximum_one.MaxMethod();
+            Console.WriteLine("{0} is the largest", result);
+
+            GenericsMaximum<string> maximum_two = new GenericsMaximum<string>(wordOne, wordTwo, wordThree);
+            string output = maximum_two.MaxMethod();
+            Console.WriteLine("{0} is the largest", output);
+
+
             Console.ReadLine();
         }
 
-        ////UC4 Extend the max method to take more than the 3 parametres.
-        ////integer  values
 
-        //int[] intArray = { 102, 98, 15, 76, 45, 37 };
-        //GenericsMaximum<int> generic = new GenericsMaximum<int>(intArray);
-        //generic.PrintValue();
-
-        ////double values
-        //double[] doubleArray = { 23.5, 70.5, 15.5, 90.5, 16.5, 65.5 };
-        //GenericsMaximum<double> genericsDouble = new GenericsMaximum<double>(doubleArray);
-        //genericsDouble.PrintValue();
-
-        ////string values
-        //string[] stringArray = { "abc", "def", "ghj", "mko", "zsd" };
-        //GenericsMaximum<string> genericString = new GenericsMaximum<string>(stringArray);
-        //genericString.PrintValue();
-        //Console.ReadLine();
     }
-
-        
-        }
-   
+}
     
 

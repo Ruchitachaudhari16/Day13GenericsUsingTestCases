@@ -68,8 +68,6 @@ namespace GenericsPracticeProblem
 
         //Refactor all the code using generic
         public T Number<T>(T firstValue, T secondValue, T thirdValue) where T : IComparable
-
-            //public int Number(int firstValue,int secondValue,int thirdValue)
         {
 
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
